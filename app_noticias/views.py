@@ -49,7 +49,7 @@ class ContatoView(FormView):
     def form_valid(self, form):
         dados = form.clean()
         mensagem = MensagemDeContato(
-            nome=dados['nome'], email=dados['email'], mensagem=dados['mensagem'])
+            cidade=dados['cidade'], estado=dados['estado'], descricao=dados['descricao'])
         mensagem.save()
         return super().form_valid(form)
 

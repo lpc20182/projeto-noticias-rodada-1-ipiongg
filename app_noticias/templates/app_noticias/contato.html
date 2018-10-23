@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Contato</title>
+    <title>Denuncia</title>
     <style type="text/css">
         .errorlist {
             color: red;
@@ -10,11 +10,11 @@
     </style>
 </head>
 <body>
-<h1>Contato</h1>
+<h1>Cadastrar Denuncia</h1>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Enviar mensagem</button>
+    <button type="submit">Fazer Denuncia</button>
 </form>
 </body>
 </html>

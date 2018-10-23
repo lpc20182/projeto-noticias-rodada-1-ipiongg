@@ -54,15 +54,15 @@ class Noticia(models.Model):
     def __str__(self):
         return self.titulo
 
-
+'''21 - Criar a página que permite cadastrar uma denúncia, contendo os campos: cidade, estado e descrição'''
 class MensagemDeContato(models.Model):
     class Meta:
         verbose_name = 'Mensagem de contato'
         verbose_name_plural = 'Mensagens de contato'
 
-    nome = models.CharField(max_length=128)
-    email = models.EmailField('E-mail', null=True, blank=True)
-    mensagem = models.TextField()
+    cidade = models.CharField(max_length=128)
+    estado = models.CharField('Estado', null=True, blank=True)
+    descricao = models.TextField()
     data = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
